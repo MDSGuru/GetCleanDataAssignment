@@ -69,7 +69,7 @@ CleanTotal<-rbind(rawTrain,rawTest) #10299 obs
 #Drop Activity
 temp<-CleanTotal[-69]
 #Compute Means
-tempmeans<-aggregate(temp, by = list(temp$SubjectID, Activity=temp$ActivityID), FUN = "mean", na.rm=TRUE)
+tempmeans<-aggregate(temp, by = list(temp$SubjectID, temp$ActivityID), FUN = "mean", na.rm=TRUE)
 
 
 #merge Activity back in and clean up
